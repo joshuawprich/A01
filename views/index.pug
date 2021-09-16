@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title Bike Track Finder
+    link(rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="")
+    link(rel="stylesheet" href='/stylesheets/style.css')
+    script(src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin="")
+    script(src='/javascripts/functions.js')
+  h1 Welcome to Bike Track Finder
+  a(id="welcomeText") Just testing paragraph writing
+  body
+    div()
+      input(placeholder="Latitude" type="text")
+      input(placeholder="Longitude" type="text")
+      input(placeholder="radius (km)" type="text")
+      button(type="button" id="searchButton" style="width: 70px; height: 15px;") Search
+    div(id="mapid" style="width: 80vw; height: 80vh")
+    div(id="trailList")
+      script(src='/javascripts/favTable.js')
+
+script(src='/javascripts/leafmapIndex.js')
+script(src='/javascripts/buttons.js')

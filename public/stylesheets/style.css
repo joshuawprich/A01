@@ -1,0 +1,21 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+#welcomeText {
+  font-size: large;
+}
+#mainContent {
+  display: flex;
+  flex-direction: column;
+}
+#favButton {
+  height: 30px;
+  width: 200px;
+  align-self: center;
+}
