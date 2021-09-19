@@ -13,18 +13,21 @@ html
     script(src='/javascripts/functions.js')
     script var data = !{JSON.stringify(data)}
     script var query = !{JSON.stringify(query)}
-  h1 Welcome to Bike Track Finder
-  a(id="welcomeText") Just testing paragraph writing
+  div(id="headerField")
+    h1(id="mainHeader") Bike Track Map
   body
     div()
       input(placeholder="Latitude" value=query.lat id="lat" type="text")
       input(placeholder="Longitude" value=query.lon id="lon"  type="text")
       input(placeholder="radius (km)" value=query.radius id="radius"  type="text")
-      button(type="button" id="searchButton" style="width: 70px; height: 15px;") Search
-    div(id="info") Number of tracks found: #{data.results}
-    div(id="mapid" style="width: 80vw; height: 80vh")
-    div(id="trailList")
-      script(src='/javascripts/favTable.js')
+      button(type="button" id="searchButton") Search
+    div(id="warnLabel")
+    div(id="map")
+      div(id="mapid" style="width: 60vw; height: 80vh")
+      div(id="trailList")
+        script(src='/javascripts/favTable.js')
+  p Warning: On full zoom out of map Latitude and Longitude clicks have irregular values due to map wrap.
 
 script(src='/javascripts/leafmapSearch.js')
 script(src='/javascripts/buttons.js')
+script(src='/javascripts/values.js')

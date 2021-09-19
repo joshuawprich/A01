@@ -3,19 +3,25 @@ document.getElementById("searchButton").onclick = function () {
   var lon = document.getElementById("lon").value;
   var radius = document.getElementById("radius").value;
 
-  goTo(lat, lon, radius);
+  goTo();
 };
 document.getElementById("findSim").onclick = function () {
   var value = document.getElementById("simNum").value;
 
   trail = JSON.parse(localStorage.getItem(localStorage.key(value)));
 
-  var lat = trail.lat;
-  var lon = trail.lon;
+  document.getElementById("lat").value = trail.lat;
+  document.getElementById("lon").value = trail.lon;
   localStorage.setItem("currentFav", JSON.stringify(trail));
-  goTo(lat, lon, 20);
+  goTo();
 };
 document.getElementById("favClear").onclick = function () {
   localStorage.clear();
   window.location.reload();
 };
+if (localStorage.getItem("currentFav")) {
+  document.getElementById("clearSelected").onclick = function () {
+    localStorage.removeItem("currentFav");
+    window.location.reload();
+  };
+}

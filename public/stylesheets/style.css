@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+  white-space: pre-line;
+}
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -7,8 +11,13 @@ a {
   color: #00b7ff;
 }
 
-#welcomeText {
-  font-size: large;
+#headerField {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+}
+#mainHeader {
+  font-size: 40px;
 }
 #mainContent {
   display: flex;
@@ -18,4 +27,20 @@ a {
   height: 30px;
   width: 200px;
   align-self: center;
+}
+#map {
+  display: flex;
+  flex-direction: row;
+}
+#trailList {
+  padding: 0 5px 0 10px;
+}
+#warnLabel {
+  color: red;
+}
+#searchButton {
+  height: 20px;
+}
+#inputs {
+  display: flex;
 }

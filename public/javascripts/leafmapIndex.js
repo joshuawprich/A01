@@ -16,11 +16,11 @@ L.tileLayer(
 
 //Function for grabbing the latitude and longitude of the click
 function onMapClick(e) {
-  //alert("You clicked the map at " + e.latlng);
-  console.log(e.latlng);
   let lat = e.latlng.lat;
   let lon = e.latlng.lng;
-  goTo(lat, lon, 20);
+  document.getElementById("lat").value = lat;
+  document.getElementById("lon").value = lon;
+  goTo();
 }
 
 mymap.on("click", onMapClick);

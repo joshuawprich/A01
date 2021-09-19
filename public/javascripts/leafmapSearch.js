@@ -26,7 +26,7 @@ L.tileLayer(
 
 var circle = L.circle([query.lat, query.lon], {
   color: "red",
-  radius: query.radius * 1000 + 500, //km to metres conversion
+  radius: query.radius * 1000 + 2000, //km to metres conversion
 }).addTo(mymap);
 
 /* Function for creating the popups on the map */
@@ -107,12 +107,12 @@ if (data.results > 0) {
 
 //Function for grabbing the latitude and longitude of the click
 function onMapClick(e) {
-  //alert("You clicked the map at " + e.latlng);
   localStorage.removeItem("currentFav");
-  console.log(e.latlng);
   let lat = e.latlng.lat;
   let lon = e.latlng.lng;
-  goTo(lat, lon, 20);
+  document.getElementById("lat").value = lat;
+  document.getElementById("lon").value = lon;
+  goTo();
 }
 
 mymap.on("click", onMapClick);
