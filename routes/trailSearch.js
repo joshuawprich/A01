@@ -2,6 +2,8 @@ var express = require("express");
 const router = express.Router();
 const axios = require("axios");
 
+const IP = process.env.IP;
+
 var options = {
   method: "GET",
   url: "https://trailapi-trailapi.p.rapidapi.com/trails/map/%7Bid%7D/gpx/",
@@ -44,6 +46,7 @@ router.get("/", function (req, res, next) {
       res.render("search", {
         data: data,
         query: query,
+        ip: IP,
       });
     })
     .catch(function (e) {
