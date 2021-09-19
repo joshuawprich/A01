@@ -5,7 +5,7 @@ function goTo(lat, lon, radius) {
   location.href =
     "http://" +
     host +
-    ":3000/search?lat=" +
+    ":80/search?lat=" +
     lat +
     "&lon=" +
     lon +
