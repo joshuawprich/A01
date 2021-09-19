@@ -1,8 +1,10 @@
+const host = window.location.hostname;
+
 //Go to a specific latitude, longitude.
 function goTo(lat, lon, radius) {
   location.href =
     "http://" +
-    ip +
+    host +
     ":3000/search?lat=" +
     lat +
     "&lon=" +
